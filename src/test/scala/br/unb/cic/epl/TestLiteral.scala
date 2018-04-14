@@ -25,4 +25,8 @@ class TestLiteral extends FlatSpec with Matchers with GivenWhenThen with BeforeA
     literal1000.eval() should be (1000)
   }
 
+  it should "return Integer 1 when we call literal1000.height()" in {
+    val literal1000 = new Core.Literal(1000) with Height.Literal
+    literal1000.height() should be (1)
+  }
 }
